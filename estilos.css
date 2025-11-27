@@ -399,6 +399,20 @@ button:active {
     }
 }
 
+/* ------------------ PARTICULAS SUBTILES (CANVAS) ------------------ */
+.particles-canvas {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    pointer-events: none; /* no interfiere con clicks */
+    z-index: 2000; /* por debajo de lightbox (9999) */
+    opacity: 1; /* opacidad del canvas controlada por JS */
+    transition: opacity 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .particles-canvas { display: none; }
+}
+
 /* ----------- TARJETAS RESPONSIVE ----------- */
 @media (max-width: 750px) {
     .tarjeta img,
@@ -447,4 +461,18 @@ button:active {
         display: block;
         padding: 10px 0;
     }
+}
+
+/* ------------------ PARTICULAS SUBTILES (CANVAS) ------------------ */
+.particles-canvas {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    pointer-events: none; /* no interfiere con clicks */
+    z-index: 5000; /* por debajo de lightbox (9999) */
+    opacity: 0.18; /* muy sutil */
+    transition: opacity 0.22s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .particles-canvas { display: none; }
 }
